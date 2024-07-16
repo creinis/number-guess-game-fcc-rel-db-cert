@@ -76,12 +76,18 @@ ALTER TABLE public.games_game_id_seq OWNER TO freecodecamp;
 --
 -- Name: games_game_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: freecodecamp
 --
-
+ALTER SEQUENCE public.games_game_id_seq OWNED BY public.games.game_id;
 
 --
 -- Name: users; Type: TABLE; Schema: public; Owner: freecodecamp
 --
+CREATE TABLE public.users (
+    user_id integer NOT NULL,
+    username character varying(22) NOT NULL
+);
 
+
+ALTER TABLE public.users OWNER TO freecodecamp;
 
 --
 -- Name: users_user_id_seq; Type: SEQUENCE; Schema: public; Owner: freecodecamp
