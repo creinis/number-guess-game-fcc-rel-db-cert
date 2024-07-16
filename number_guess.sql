@@ -50,7 +50,14 @@ SET default_table_access_method = heap;
 --
 -- Name: games; Type: TABLE; Schema: public; Owner: freecodecamp
 --
+CREATE TABLE public.games (
+    game_id integer NOT NULL,
+    user_id integer NOT NULL,
+    best_game integer NOT NULL
+);
 
+
+ALTER TABLE public.games OWNER TO freecodecamp;
 
 --
 -- Name: games_game_id_seq; Type: SEQUENCE; Schema: public; Owner: freecodecamp
