@@ -139,12 +139,12 @@ INSERT INTO public.games (game_id, user_id, best_game) VALUES
 --
 -- Name: games_game_id_seq; Type: SEQUENCE SET; Schema: public; Owner: freecodecamp
 --
-
+SELECT pg_catalog.setval('public.games_game_id_seq', 1, false);
 
 --
 -- Name: users_user_id_seq; Type: SEQUENCE SET; Schema: public; Owner: freecodecamp
 --
-
+SELECT pg_catalog.setval('public.users_user_id_seq', 1, false);
 
 --
 -- Name: games games_pkey; Type: CONSTRAINT; Schema: public; Owner: freecodecamp
