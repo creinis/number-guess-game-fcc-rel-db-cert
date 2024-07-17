@@ -35,4 +35,22 @@ do
   if [[ ! $NUM =~ ^[0-9]+$ ]]
   then
     echo "That is not an integer, guess again:"
-    
+    #If anything other than an integer is input as a guess, it should print That is not an integer, guess again:
+    else
+    if [[ $NUM -eq $SECRET_NUMBER ]]
+    then
+    break;
+    else
+      if [[ $NUM -gt $SECRET_NUMBER ]]
+      then
+        echo "It's lower than that, guess again:"
+      elif [[ $NUM -lt $SECRET_NUMBER ]]
+      then
+        echo "It's higher than that, guess again:"
+      fi
+    fi
+  fi
+  NUMBER_OF_GUESSES=$(( $NUMBER_OF_GUESSES + 1 ))
+  done
+  
+  
