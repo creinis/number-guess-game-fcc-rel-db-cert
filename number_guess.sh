@@ -23,3 +23,10 @@ else
   echo "Welcome back, $USERNAME! You have played $GAMES_PLAYED games, and your best game took $BEST_GAME guesses."
 fi
 
+# The next line printed should be Guess the secret number between 1 and 1000: and input from the user should be read
+# Until they guess the secret number, it should print It's lower than that, guess again: if the previous input was higher than the secret number, and It's higher than that, guess again: if the previous input was lower than the secret number. Asking for input each time until they input the secret number.
+
+SECRET_NUMBER=$(( 1 + $RANDOM % 1000 ))
+NUMBER_OF_GUESSES=1
+echo "Guess the secret number between 1 and 1000:"
+
