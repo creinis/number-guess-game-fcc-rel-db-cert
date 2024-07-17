@@ -33,7 +33,7 @@ This project demonstrates a number guessing game where users try to guess a rand
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/yourusername/number-guessing-game.git
+   git clone https://github.com/creinis/number-guess-game-fcc-rel-db-cert.git
    cd number-guessing-game
    ```
 
