@@ -19,5 +19,7 @@ then
   NEW_USER=$($PSQL "INSERT INTO users(username) VALUES('$USERNAME')")
   echo "Welcome, $USERNAME! It looks like this is your first time here."
 else
-
+# If the username has not been used before, you should print Welcome, <username>! It looks like this is your first time here.
+  echo "Welcome back, $USERNAME! You have played $GAMES_PLAYED games, and your best game took $BEST_GAME guesses."
+fi
 
