@@ -30,3 +30,9 @@ SECRET_NUMBER=$(( 1 + $RANDOM % 1000 ))
 NUMBER_OF_GUESSES=1
 echo "Guess the secret number between 1 and 1000:"
 
+while read NUM
+do
+  if [[ ! $NUM =~ ^[0-9]+$ ]]
+  then
+    echo "That is not an integer, guess again:"
+    
