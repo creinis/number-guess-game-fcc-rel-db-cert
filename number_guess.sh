@@ -53,4 +53,15 @@ do
   NUMBER_OF_GUESSES=$(( $NUMBER_OF_GUESSES + 1 ))
   done
   
-  
+#When the secret number is guessed, your script should print You guessed it in <number_of_guesses> tries. The secret number was <secret_number>. Nice job! and finish running
+
+if [[ $NUMBER_OF_GUESSES == 1 ]]
+then
+  echo "You guessed it in $NUMBER_OF_GUESSES tries. The secret number was $SECRET_NUMBER. Nice job!"
+else
+  echo "You guessed it in $NUMBER_OF_GUESSES tries. The secret number was $SECRET_NUMBER. Nice job!"
+fi
+
+USER_ID=$($PSQL "SELECT user_id FROM users WHERE username = '$USERNAME'")
+SAVE_GAME=$($PSQL "INSERT INTO games(best_game, user_id) VALUES($NUMBER_OF_GUESSES, $USER_ID)")
+
