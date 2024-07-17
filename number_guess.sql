@@ -106,7 +106,7 @@ ALTER TABLE public.users_user_id_seq OWNER TO freecodecamp;
 --
 -- Name: users_user_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: freecodecamp
 --
-
+ALTER SEQUENCE public.users_user_id_seq OWNED BY public.users.user_id;
 
 --
 -- Name: games game_id; Type: DEFAULT; Schema: public; Owner: freecodecamp
