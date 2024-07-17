@@ -122,12 +122,19 @@ ALTER TABLE ONLY public.users ALTER COLUMN user_id SET DEFAULT nextval('public.u
 --
 -- Data for Name: games; Type: TABLE DATA; Schema: public; Owner: freecodecamp
 --
-
+INSERT INTO public.users (user_id, username) VALUES 
+(1, 'Alice'),
+(2, 'Bob'),
+(3, 'Charlie');
 
 --
 -- Data for Name: users; Type: TABLE DATA; Schema: public; Owner: freecodecamp
 --
-
+INSERT INTO public.games (game_id, user_id, best_game) VALUES 
+(1, 1, 5),
+(2, 1, 7),
+(3, 2, 3),
+(4, 3, 8);
 
 --
 -- Name: games_game_id_seq; Type: SEQUENCE SET; Schema: public; Owner: freecodecamp
