@@ -11,4 +11,13 @@ read USERNAME
 # If that username has been used before, it should print Welcome back, <username>! You have played <games_played> games, and your best game took <best_game> guesses., with <username> being a users name from the database, <games_played> being the total number of games that user has played, and <best_game> being the fewest number of guesses it took that user to win the game
 USERNAME_CHECK=$($PSQL "SELECT username FROM users WHERE username='$USERNAME'" )
 
+GAMES_PLAYED=$($PSQL "SELECT COUNT(*) FROM users INNER JOIN games USING(user_id) WHERE username='$USERNAME'")
+BEST_GAME=$($PSQL "SELECT MIN(best_game) FROM users INNER JOIN games USING(user_id) WHERE username='$USERNAME'")
+
+if [[ -z $USERNAME_CHECK ]]
+then
+  NEW_USER=$($PSQL "INSERT INTO users(username) VALUES('$USERNAME')")
+  echo "Welcome, $USERNAME! It looks like this is your first time here."
+else
+
 
