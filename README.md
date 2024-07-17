@@ -77,12 +77,6 @@ This project can be used as an educational tool to demonstrate basic scripting w
 - **Ease of Maintenance:** SQL and bash scripts simplify initial setup and ongoing maintenance of the system.
 - **Extensibility:** Potential for future expansion with new features, such as detailed user statistics or additional game modes.
 
-## Future Enhancements
-
-- **Leaderboard:** Implement a leaderboard to display top players with the fewest guesses.
-- **Multi-Game Sessions:** Allow users to play multiple games in a single session and track their overall performance.
-- **Difficulty Levels:** Introduce different difficulty levels with varying ranges of numbers to guess.
-
 ---
 #### This is a FreeCodeCamp Challenge for Relational Database Projects Certification
 <p align="center">
