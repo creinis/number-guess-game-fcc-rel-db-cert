@@ -111,11 +111,12 @@ ALTER SEQUENCE public.users_user_id_seq OWNED BY public.users.user_id;
 --
 -- Name: games game_id; Type: DEFAULT; Schema: public; Owner: freecodecamp
 --
-
+ALTER TABLE ONLY public.games ALTER COLUMN game_id SET DEFAULT nextval('public.games_game_id_seq'::regclass);
 
 --
 -- Name: users user_id; Type: DEFAULT; Schema: public; Owner: freecodecamp
 --
+ALTER TABLE ONLY public.users ALTER COLUMN user_id SET DEFAULT nextval('public.users_user_id_seq'::regclass);
 
 
 --
